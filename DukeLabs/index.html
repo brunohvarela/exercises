@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to Dukelabs</title>
+        <link rel="stylesheet" href="resources/style.css">
+        <script src="resources/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <img class="img_slogan" src="resources/duke.jpg">
+            <div class="slogan">We do science here</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="mailto:duke@dukelabs.org">Contact</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>Experiments and measurements</main>
+        <form id="exp">
+            <fieldset>
+                <legend>Experiment</legend>
+                <div>
+                    <div class="field">
+                        <label for="exp_id_field">ID:</label>
+                        <input type="text" id ="exp_id_field">
+                        <input class="button" type="submit" id="exp_find_button" value="Find">
+                    </div>
+                    <div class="field">
+                        <label for="exp_task_field">Task:</label>
+                        <input type="text" id ="exp_task_field" disabled>
+                    </div>
+                    <div class="field">
+                        <label for="exp_budget_field">Budget:</label>
+                        <input type="text" id ="exp_budget_field" disabled>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Schedule</legend>
+                    <div class="field">
+                        <label for="exp_startTime_field">Start Time:</label>
+                        <input type="datetime-local" id ="exp_startTime_field" disabled>
+                    </div>
+                    <div class="field">
+                        <label for="exp_endTime_field">End Time:</label>
+                        <input type="datetime-local" id ="exp_endTime_field" disabled>
+                    </div>
+                    <div class="field">
+                        <label for="exp_complete_field">Complete?</label>
+                        <input type="checkbox" id ="exp_complete_field" disabled>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Summary</legend>
+                    <!--<progress id="exp_average_field" min="0" max="100" value="0">0</progress>-->
+                    <div id="exp_average_box">
+                        <div id="exp_average_value"></div>
+                    </div>
+                </fieldset>
+            </fieldset>
+        </form>
+        <fieldset>
+            <legend>Measurements</legend>
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Unit</th><th>Value</th><th>Time</th></tr>
+                </thead>
+                <tbody id="mea_table">
+                </tbody>
+            </table>
+            <input class="button" type="button" value="Add Measurement" id="mea_add_button" disabled>
+        </fieldset>
+        <footer>Copyright ©2025</footer>
+        <dialog id="mea_add_dialog">
+            <form id="mea">
+                <fieldset>
+                    <legend>Add Measurement</legend>
+                    <select id="mea_unit_input">
+                        <option value="s">Second</option>
+                        <option value="m">Meter</option>
+                        <option value="kg">Kilogram</option>
+                        <option value="A">Ampere</option>
+                        <option value="K">Kevin</option>
+                        <option value="mol">Mole</option>
+                        <option value="cd">Candela</option>
+                    </select>
+                    <input type="text" id="mea_value_input">
+                    <input class="button" type="submit" value="Ok" id="mea_ok_button">
+                    <input type="reset" value="Cancel" id="mea_reset_button">
+                </fieldset>
+            </form>
+        </dialog>
+    </body>
+</html>

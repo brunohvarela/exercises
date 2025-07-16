@@ -1,0 +1,40 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto 80px auto 80px;
+    grid-template-rows: 20px auto auto auto;
+    grid-gap: 10px;
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+.area {
+    grid-area: 2 / 1 / span 2 / span 3;
+}
+
+.box {
+    display: flex;
+    background-color: lightyellow;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    background-color: lightgrey;
+    height: 200px;
+    flex-flow: row-reverse wrap;
+    align-content: stretch;
+    justify-content: space-between;
+}
+
+.box2 {
+    display: flex;
+    background-color: lightyellow;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    padding: 5x;
+    margin: 5px;
+}
