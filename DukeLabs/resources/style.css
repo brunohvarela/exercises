@@ -227,3 +227,7 @@ dialog {
     line-height: 1.2em;
     text-align: center;
 }
+
+.grey {
+    filter: grayscale(100%);
+}
